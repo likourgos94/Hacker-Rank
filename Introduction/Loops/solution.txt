@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())
+    
+list1 = []    
+n -=1
+while n >= 0:
+    list1.append(n**2)
+    n -= 1
+
+
+for i in reversed(list1):
+  print (i)
