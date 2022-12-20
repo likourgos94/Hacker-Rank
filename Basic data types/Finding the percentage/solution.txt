@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+#get values of key from dictionary
+list1 = (student_marks.get(query_name))
+x = 0
+y = 0
+for item in list1:
+    x += item
+    y += 1
+
+#print 2 decimals
+print (format(x/y,".2f"))

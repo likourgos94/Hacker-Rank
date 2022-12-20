@@ -1,0 +1,9 @@
+def average(array):
+    # your code goes here
+    set1 = set(array)
+    total = 0
+    for i in set1:
+        total += i
+    return float(total/len(set1)) 
+
+if __name__ == '__main__':

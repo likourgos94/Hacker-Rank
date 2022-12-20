@@ -1,0 +1,37 @@
+if __name__ == '__main__':
+    list1 = []
+    templist = []
+    for _ in range(int(input())):
+        name = input()
+        #make list with name and score
+        templist.append(name)
+        score = float(input())
+        templist.append(score)
+        #make list of lists
+        list1.append(templist)
+        templist= []
+        
+#make list with scores
+for i in list1:
+    templist.append(i[1])
+
+#remove minimumgrade to find second minimum grade
+templist = list(set(templist))
+minimumgrade = min(templist)
+templist.remove(minimumgrade)
+
+secondminimumgrade = min(templist)
+
+#make list with all students with second lowest grade
+templist = []
+for i in list1:
+    if i[1] == secondminimumgrade:
+        templist.append(i[0])
+
+#sort student list alphabetically
+templist = sorted(templist)#
+
+#print list
+for i in templist:
+    print (i)
+    

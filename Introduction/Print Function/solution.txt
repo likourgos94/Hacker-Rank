@@ -1,0 +1,6 @@
+range1 = range(n)
+string = ""
+for x in range1:
+    string += str(x+1)
+
+print (string)
