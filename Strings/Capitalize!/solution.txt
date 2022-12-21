@@ -1,0 +1,41 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    z= []
+    #This code will split the input string into words in a list using separation as no-word-character.
+    y = re.split('([^a-zA-Z0-9])',s)
+    print (y)
+    
+    #for each word in list
+    for i in y:
+        #check if word is empty due to no word separation, if it is empty it would error
+        if len(i)>0:
+            #if the first character of the word is a letter
+            if i[0].isalpha():
+                #append to some other list because strings are retarded, i mean immutable
+                z.append (i.title())
+            else: z.append (i)
+
+        
+    #join words in list again    
+    s = "".join(z)
+    
+    return s
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
