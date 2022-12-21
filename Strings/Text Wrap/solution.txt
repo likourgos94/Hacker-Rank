@@ -1,0 +1,14 @@
+import textwrap
+# need import for textwrap
+
+
+
+def wrap(string, max_width):
+    # textwrap.fill returns string, textwrap.fill returns list
+    x= textwrap.fill(string, max_width)
+    return x
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
