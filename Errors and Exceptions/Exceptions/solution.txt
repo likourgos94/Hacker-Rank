@@ -1,0 +1,32 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+x=0
+y=0
+list1 = []
+list2 = []
+#interpret string input as int for number of values
+x=int(input())
+
+
+#add all values to list
+for i in range (x):
+    y=input()
+    list1.append(y)
+
+#create list of lists with each list1 value separated by space 
+for item in list1:
+    list2.append (item.split())
+    
+
+for y in list2:
+    try:
+        #need the ints otherwise it throws weird errors for doing math with strings
+        print (int((int(y[0])/int(y[1]))))   
+    except ZeroDivisionError:
+        print("Error Code: integer division or modulo by zero")
+    except ValueError as e:
+        print("Error Code:",e)
+        
+        
+#gives default message for such an error, e is the thing that caused error       
+#except ZeroDivisionError as e:
+#print "Error Code:",e

@@ -1,0 +1,34 @@
+if __name__ == '__main__':
+    N = int(input())
+
+
+list1=[]
+finallist=[]
+split=[]
+
+#create list with all inputs
+for i in range(N):
+    list1.append(input())
+
+#for every input check
+for item in list1:
+    
+    if "print" in item:
+        print(finallist)
+    if "sort" in item:
+        finallist.sort()
+    if "pop" in item:
+        finallist.pop()
+    if "reverse" in item:
+        finallist = finallist[::-1]
+    #if index is required create list with space separated input
+    if "insert" or "remove" or "append" in item:
+        split = item.split()
+        if "append" in item:
+            finallist.append(int(split[1]))
+        if "insert" in item:
+            finallist.insert(int(split[1]),int(split[2]))
+        if "remove" in item:
+            finallist.remove(int(split[1]))
+
+        
